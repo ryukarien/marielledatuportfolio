@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/marielledatuportfolio/static/css/main.e6c13ad2.css",
+    "main.js": "/marielledatuportfolio/static/js/main.52762063.js",
+    "static/media/jeep.png": "/marielledatuportfolio/static/media/jeep.f880ff3df66f5ae5d9a8.png",
+    "static/media/cine.png": "/marielledatuportfolio/static/media/cine.774c06819991fae5f5cd.png",
+    "static/media/db.png": "/marielledatuportfolio/static/media/db.3be3d67fd7a4c3313432.png",
+    "static/media/ui.png": "/marielledatuportfolio/static/media/ui.ce073e8ebe87afc79706.png",
+    "static/media/web.png": "/marielledatuportfolio/static/media/web.9ef63ddde85cf78a4606.png",
+    "static/media/mobile.png": "/marielledatuportfolio/static/media/mobile.104f1f76f667a30a1420.png",
+    "static/media/page_rep.jpg": "/marielledatuportfolio/static/media/page_rep.1e6399194cb448debcdf.jpg",
+    "static/media/logo.png": "/marielledatuportfolio/static/media/logo.d15a7ce15a18b3681290.png",
+    "static/media/meow.jfif": "/marielledatuportfolio/static/media/meow.a90181eff9ed45aeaf71.jfif",
+    "static/media/helpify.jfif": "/marielledatuportfolio/static/media/helpify.0f63a2782a4f154117c0.jfif",
+    "static/media/profile_pic.jfif": "/marielledatuportfolio/static/media/profile_pic.8ecff8f610136c71334c.jfif",
+    "index.html": "/marielledatuportfolio/index.html",
+    "main.e6c13ad2.css.map": "/marielledatuportfolio/static/css/main.e6c13ad2.css.map",
+    "main.52762063.js.map": "/marielledatuportfolio/static/js/main.52762063.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.52762063.js"
+  ]
+}
