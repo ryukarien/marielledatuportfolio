@@ -45,7 +45,14 @@ const CERTS = [
 const AWARDS = [
   { year:"2023–Present", label:"College Dean's Lister", detail:"Holy Angel University" },
   { year:"2023 1st Sem", label:"President's Lister", detail:"Holy Angel University" },
-  { year:"2021–2023", label:"Gawad Gobernador Awardee", detail:"With Highest Honor — SHS" },
+  { year:"2024–2025", label:"Vice Governor Staff", detail:"1st–2nd Semester College Student Council" },
+  { year:"2023–2024", label:"Governor Staff", detail:"2nd Semester College Student Council" },
+  { year:"2023–2026", label:"Member", detail:"Google Developer Group" },
+  { year:"2023–2025", label:"Member", detail:"Multimedia Aficionados for Interested Artists (MAFIA)" },
+  { year:"2023–2024", label:"Member", detail:"League of Outstanding Programmers (LOOP)" },
+  { year:"2022–2023", label:"Secretary", detail:"Senior High School Supreme Student Council" },
+  { year:"2021–2023", label:"With Highest Honors", detail:"Saint Catherine of Siena Academy"},
+  { year:"2021–2023", label:"Gawad Gobernador Awardee", detail:"Saint Catherine of Siena Academy" },
   { year:"2021–2023", label:"Serviam Awardee & Best in Science", detail:"Saint Catherine of Siena Academy" },
   { year:"2017–2021", label:"Graduated with High Honors", detail:"Junior High School" },
 ];
