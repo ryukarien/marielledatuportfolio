@@ -502,45 +502,14 @@ root: {
   projectFeatured:{ display:"none" },
   featuredBadge:{ display:"inline-block", background:"linear-gradient(135deg,#7c3aed,#a855f7)", color:"#fff", fontSize:"0.7rem", fontWeight:600, padding:"0.22rem 0.75rem", borderRadius:999 },
   githubBtn:{ display:"inline-flex", alignItems:"center", gap:"0.4rem", background:"#1a0a2e", color:"#fff", padding:"0.9rem 2.2rem", borderRadius:999, fontSize:"0.92rem", fontWeight:600, textDecoration:"none", fontFamily:"'Sora',sans-serif", boxShadow:"0 4px 16px rgba(26,10,46,0.15)" },
-ctaBanner: {
-  background: "linear-gradient(135deg,#6b21a8,#7c3aed 50%,#c084fc)",
-  borderRadius: 28,
-  padding: "3rem 3.5rem",
-  color: "#fff",
-  display: "flex",
-  flexDirection: "column", // ✅ stack vertically
-  gap: "2rem",
-  alignItems: "center",
-},
-
-// Update s.ctaLinks (contact cards container)
-ctaLinks: {
-  display: "grid",
-  gridTemplateColumns: "1fr", // ✅ one column by default for vertical stacking
-  gap: "1rem",
-  marginTop: "1.5rem",
-  width: "100%",
-  maxWidth: 500, // optional: keeps cards from stretching too wide
-  justifyItems: "center",
-},
-        // spacing between cards
-
-  
+  ctaBanner: { background: "linear-gradient(135deg,#6b21a8,#7c3aed 50%,#c084fc)", borderRadius: 28, padding: "3rem 3.5rem", color: "#fff", display: "flex", flexDirection: "column", gap: "2rem", alignItems: "center" },
   ctaLeft:{},
   ctaTitle:{ fontFamily:"'Instrument Serif',Georgia,serif", fontSize:"2rem", fontStyle:"italic", marginBottom:"0.8rem" },
   ctaSub:{ fontSize:"0.9rem", opacity:0.85, lineHeight:1.75 },
-
-
-// Optional: tweak .ctaCard hover effect if needed
-ctaCardHover: {
-  transform: "translateY(-3px)",
-  boxShadow: "0 8px 20px rgba(124,58,237,0.2)"
-},
-  ctaCard:{ background:"rgba(255,255,255,0.12)", backdropFilter:"blur(10px)", border:"1px solid rgba(255,255,255,0.2)", borderRadius:16, padding:"1rem 1.2rem", display:"flex", alignItems:"center", gap:"0.8rem", textDecoration:"none", color:"#fff" },
-  ctaCardIcon:{ fontSize:"1.4rem" },
-  ctaCardLabel:{ fontSize:"0.68rem", opacity:0.7, textTransform:"uppercase", letterSpacing:"0.06em" },
-  ctaCardVal:{ fontSize:"0.82rem", fontWeight:600 },
-
+  ctaLinks: { display: "grid", gridTemplateColumns: "repeat(4, minmax(150px, auto))", gap: "1.5rem", marginTop: "1.5rem", width: "100%", justifyItems: "center", alignItems: "center" },
+  ctaCard: { background:"rgba(255,255,255,0.12)", backdropFilter:"blur(10px)", border:"1px solid rgba(255,255,255,0.2)", borderRadius:16, padding:"1rem 1.2rem", display:"flex", flexDirection:"column", alignItems:"center", gap:"0.4rem", textDecoration:"none", color:"#fff", transition:"all 0.3s ease" },
+  ctaCardLabel: { fontSize:"0.68rem", opacity:0.7, textTransform:"uppercase", letterSpacing:"0.06em" },
+  ctaCardVal: { fontSize:"0.82rem", fontWeight:600, textAlign:"center" },
   footer:{ background:"#1a0a2e", color:"rgba(255,255,255,0.5)", textAlign:"center", padding:"1.8rem", fontSize:"0.8rem" },
   mobileMenu:{ position:"fixed", inset:0, background:"rgba(26,10,46,0.97)", zIndex:200, display:"flex", flexDirection:"column", alignItems:"center", justifyContent:"center", gap:"2rem" },
   closeBtn:{ position:"absolute", top:"1.5rem", right:"5vw", background:"none", border:"none", color:"rgba(255,255,255,0.6)", fontSize:"1.6rem", cursor:"pointer" },
@@ -549,106 +518,224 @@ ctaCardHover: {
 
 const globalCSS = `
   @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap');
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  *, *::before, *::after { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+  }
+  
+  html { scroll-behavior: smooth; }
+  
   html, body, #root { 
     margin: 0 !important; 
     padding: 0 !important; 
     width: 100% !important;
     height: 100% !important;
-    background-color: #faf8ff !important; /* Forces the white/violet bg everywhere */
+    background-color: #faf8ff !important;
     overflow-x: hidden;
   }
 
-  * { box-sizing: border-box; }
-  .hover-lift { transition: transform 0.25s ease, box-shadow 0.25s ease !important; }
-  .hover-lift:hover { transform: translateY(-3px) !important; box-shadow: 0 10px 24px rgba(124,58,237,0.14) !important; }
+  /* ──── SCROLL ANIMATIONS ──── */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* ──── HOVER EFFECTS ──── */
+  .hover-lift { 
+    transition: transform 0.25s ease, box-shadow 0.25s ease !important; 
+  }
+  .hover-lift:hover { 
+    transform: translateY(-3px) !important; 
+    box-shadow: 0 10px 24px rgba(124,58,237,0.14) !important; 
+  }
+
   .nav-btn:hover { color: #7c3aed !important; }
+  
   .hamburger-btn { display: none !important; }
   .nav-links { display: flex !important; }
+
   .hero-responsive { text-align: left; }
   .hero-left { width: 100%; }
   .hero-image { width: 100%; }
 
-  .btn-primary-hover { transition: transform 0.2s, box-shadow 0.2s !important; }
-  .btn-primary-hover:hover { transform: translateY(-2px) !important; box-shadow: 0 8px 28px rgba(124,58,237,0.45) !important; }
-  .project-hover { transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important; }
-  .project-hover:hover { transform: translateY(-5px) !important; border-color: #7c3aed !important; box-shadow: 0 14px 32px rgba(124,58,237,0.16) !important; }
-  .project-hover:active { transform: translateY(-2px) !important; }
-  .btn-primary-hover:hover, .btn-primary-hover:focus { transform: translateY(-2px) !important; box-shadow: 0 10px 30px rgba(124,58,237,0.3) !important; }
-  .cta-card-hover { transition: background 0.2s, transform 0.2s !important; }
-  .cta-card-hover:hover { background: rgba(255,255,255,0.22) !important; transform: translateY(-2px) !important; }
-
-  @media (max-width: 980px) {
-    .project-hover { width: 100% !important; }
-    .cta-card-hover { width: 100% !important; }
+  .btn-primary-hover { 
+    transition: transform 0.2s, box-shadow 0.2s !important; 
+  }
+  .btn-primary-hover:hover { 
+    transform: translateY(-2px) !important; 
+    box-shadow: 0 8px 28px rgba(124,58,237,0.45) !important; 
   }
 
-  @media (max-width: 920px) {
-    .about-grid-mobile, .about-grid-mobile > div { width: 100% !important; }
+  .project-hover { 
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
+    animation: fadeInUp 0.6s ease both;
+  }
+  .project-hover:hover { 
+    transform: translateY(-5px) !important; 
+    border-color: #7c3aed !important; 
+    box-shadow: 0 14px 32px rgba(124,58,237,0.16) !important; 
   }
 
-  @media (max-width: 900px) {
+  .cta-card-hover { 
+    transition: all 0.3s ease !important;
+    animation: fadeInUp 0.5s ease both;
+  }
+  .cta-card-hover:hover { 
+    background: rgba(255,255,255,0.22) !important; 
+    transform: translateY(-3px) !important; 
+  }
+
+  /* ──── DESKTOP LAYOUT ──── */
+  @media (min-width: 901px) {
+    .projects-grid-mobile { grid-template-columns: repeat(3, 1fr) !important; }
+    .ctaLinks { grid-template-columns: repeat(4, minmax(150px, auto)) !important; }
+    .about-grid-mobile { grid-template-columns: 1.1fr 0.9fr !important; }
+  }
+
+  /* ──── TABLET LAYOUT ──── */
+  @media (max-width: 900px) and (min-width: 641px) {
     .nav-links { display: none !important; }
     .hamburger-btn { display: flex !important; }
-    .hero-responsive { display: grid !important; grid-template-columns: 1fr !important; gap: 1.4rem !important; }
+    
+    .hero-responsive { 
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 2rem !important;
+    }
     .hero-left { order: 2 !important; text-align: center !important; }
-    .hero-image { order: 1 !important; display: flex !important; justify-content: center !important; }
-    .heroSection { padding: 5rem 4vw 3rem !important; }
-    .heroSection h1 { font-size: clamp(2rem, 7vw, 2.9rem) !important; }
-    .heroSection p { font-size: 0.95rem !important; max-width: 100% !important; }
-    .heroBtns { flex-direction: column !important; align-items: center; gap: 0.7rem !important; }
-    .heroBtns a, .heroBtns button { width: 100% !important; max-width: 280px; }
-.ctaLinks {
-  display: grid;
-  grid-template-columns: 1fr;  /* mobile: one column */
-  gap: 1.5rem;
-  justify-content: center;      /* center the cards */
-}
-
-@media (min-width: 768px) {
-  .ctaLinks {
-    grid-template-columns: repeat(4, auto) !important; /* desktop: one line */
-    justify-content: center;
-  }
-}
-
-.ctaCard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  background: #fff;
-  border-radius: 12px;
-  text-decoration: none;
-  color: #1f2937;
-  min-width: 180px;
-  transition: all 0.2s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-    .ctaBanner { grid-template-columns: 1fr !important; gap: 1rem !important; padding: 2rem 1rem !important; }
-    .ctaLinks { grid-template-columns: 1fr !important; }
+    .hero-image { order: 1 !important; }
+    
+    .projects-grid-mobile { grid-template-columns: repeat(2, 1fr) !important; }
+    .ctaLinks { grid-template-columns: repeat(2, 1fr) !important; gap: 1.2rem !important; }
     .about-grid-mobile { grid-template-columns: 1fr !important; }
-    .projects-grid-mobile { grid-template-columns: 1fr !important; }
-    .ctaCard { width: 100% !important; }
-    .ctaCardVal { word-break: break-word; }
-    .ctaCard { padding: 1rem !important; }
+    .awardsWrapper { grid-template-columns: 1fr !important; }
+    
+    .ctaBanner { padding: 2.5rem 2rem !important; gap: 1.5rem !important; }
   }
 
-  @media (max-width: 760px) {
+  /* ──── MOBILE LAYOUT ──── */
+  @media (max-width: 640px) {
+    .nav-links { display: none !important; }
+    .hamburger-btn { display: flex !important; }
+    
+    .hero-responsive { 
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 1.5rem !important;
+    }
+    .hero-left { 
+      order: 2 !important; 
+      text-align: center !important; 
+    }
+    .hero-image { 
+      order: 1 !important;
+      display: flex !important;
+      justify-content: center !important;
+    }
+    
     section { padding: 3rem 0 !important; }
-    .about-grid-mobile { display: grid !important; grid-template-columns: 1fr !important; gap: 1rem !important; }
-    .projects-grid-mobile { grid-template-columns: 1fr !important; }
-    .project-card { height: auto !important; }
-     ctaBanner: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-  ctaLinks: {
-    gridTemplateColumns: "repeat(4, auto)", // one line for 4 cards
-    gap: "1rem",
-    justifyContent: "flex-end",
-    justifyItems: "stretch",
+    
+    .sectionInner { padding: 0 4vw !important; }
+    .heroSection { padding: 5rem 4vw 2rem !important; }
+    
+    .heroSection h1 { 
+      font-size: clamp(1.8rem, 6vw, 2.5rem) !important; 
+    }
+    .heroSection p { 
+      font-size: 0.95rem !important; 
+      max-width: 100% !important; 
+    }
+    
+    .heroBtnsWrapper { 
+      flex-direction: column !important; 
+      gap: 0.8rem !important; 
+    }
+    .heroBtnsWrapper a, 
+    .heroBtnsWrapper button { 
+      width: 100% !important; 
+      max-width: none !important;
+    }
+    
+    .projects-grid-mobile { 
+      grid-template-columns: 1fr !important; 
+      gap: 1rem !important;
+    }
+    
+    .ctaLinks { 
+      grid-template-columns: 1fr !important;
+      gap: 1rem !important;
+    }
+    
+    .ctaCard { 
+      width: 100% !important;
+      padding: 0.85rem 1rem !important;
+    }
+    
+    .ctaBanner { 
+      padding: 2rem 1.5rem !important; 
+      gap: 1.2rem !important;
+      border-radius: 20px !important;
+    }
+    
+    .ctaLeft {
+      text-align: center !important;
+    }
+    
+    .about-grid-mobile { 
+      grid-template-columns: 1fr !important;
+      gap: 1.5rem !important; 
+    }
+    
+    .awardsWrapper { 
+      grid-template-columns: 1fr !important;
+      gap: 1rem !important;
+    }
+    
+    .sideCard {
+      padding: 1.2rem !important;
+    }
+    
+    .sectionTitle {
+      font-size: clamp(1.6rem, 5vw, 2.2rem) !important;
+    }
   }
+
+  /* ──---- Accessibility ────── */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 `;
