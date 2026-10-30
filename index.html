@@ -1,190 +1,233 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Marielle Datu - Aspiring Project Manager and Full Stack Developer" />
-    <title>Marielle Datu | Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#faf8ff" />
+    <meta
+      name="description"
+      content="Marielle Datu — 21-year-old Computer Science student, aspiring Project Manager, UI/UX designer, and developer."
+    />
+    <title>Marielle Datu — Portfolio</title>
+    <link rel="icon" href="static/media/logo.d15a7ce15a18b3681290.png" />
     <link rel="stylesheet" href="static/css/portfolio.css" />
+    <script defer src="static/js/portfolio.js"></script>
   </head>
   <body>
-    <header class="topbar">
-      <div class="container nav-wrap">
-        <a class="brand" href="#home" aria-label="Marielle Datu home">
-          <img src="static/media/logo.d15a7ce15a18b3681290.png" alt="Marielle Datu logo" />
-          <span>Marielle Datu</span>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Marielle Datu, home">
+          <img class="brand-logo" src="static/media/logo.d15a7ce15a18b3681290.png" alt="" />
         </a>
-
-        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+          <span></span><span></span><span></span>
         </button>
-
-        <nav class="site-nav" aria-label="Main navigation">
+        <div class="nav-links" id="nav-links">
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
-          <a href="#achievements">Achievements</a>
+          <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
-          <a class="nav-cv" href="CV_Datu.pdf" target="_blank" rel="noreferrer">View CV</a>
-        </nav>
-      </div>
+          <a class="nav-cv" href="CV_Datu.pdf" target="_blank" rel="noopener noreferrer">My CV ↗</a>
+          <button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Toggle color theme">☾</button>
+        </div>
+      </nav>
     </header>
 
-    <main id="home">
-      <section class="hero section-pad">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Aspiring Project Manager • Full Stack Developer</p>
-            <h1>
-              Hello, I’m <span class="accent">Marielle Datu</span>
-            </h1>
-            <p class="intro">
-              I’m 21 years old and an <em>aspiring Project Manager</em> with a strong foundation in
-              <em>leadership, coordination, creativity, and innovation</em>. I enjoy turning ideas into
-              meaningful digital experiences and bringing people together to build something useful,
-              impactful, and memorable.
-            </p>
-            <div class="hero-actions">
-              <a class="primary-btn" href="CV_Datu.pdf" target="_blank" rel="noreferrer">View my CV</a>
-              <a class="secondary-btn" href="#projects">Explore projects</a>
-            </div>
-            <ul class="hero-meta">
-              <li>Leadership</li>
-              <li>Project Coordination</li>
-              <li>Full Stack Development</li>
-            </ul>
+    <main id="main">
+      <section class="hero section container" id="home">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="status-dot"></span> Open to learning and new opportunities</p>
+          <h1>Thoughtful ideas.<br /><span>Well-led projects.</span></h1>
+          <p class="hero-intro">
+            Hi, I’m <strong>Marielle</strong> — a 21-year-old Computer Science student and
+            an <strong>aspiring Project Manager and Full Stack Developer</strong> who enjoys
+            bringing people, plans, and creative technology together.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">Explore my projects <span aria-hidden="true">↓</span></a>
+            <a class="button button-outline" href="CV_Datu.pdf" target="_blank" rel="noopener noreferrer">View my CV <span aria-hidden="true">↗</span></a>
           </div>
+          <div class="hero-meta">
+            <span>Based in Angeles City, Philippines</span>
+            <span class="meta-separator" aria-hidden="true">·</span>
+            <span>BS Computer Science, Holy Angel University</span>
+          </div>
+        </div>
+        <div class="hero-art reveal" aria-label="Portfolio introduction">
+          <div class="art-glow"></div>
+          <div class="art-card art-card-back"><span>PLAN</span><i>↗</i></div>
+          <div class="profile-frame">
+            <img src="static/media/profile_pic.8ecff8f610136c71334c.jfif" alt="Portrait of Marielle Datu" />
+            <div class="profile-badge"><span>✦</span><span><strong>Marielle Datu</strong><small>Aspiring PM · Full Stack Developer</small></span></div>
+          </div>
+          <span class="art-spark spark-one">✳</span>
+          <span class="art-spark spark-two">✦</span>
+          <span class="art-label">Curiosity in motion</span>
+        </div>
+        <a class="scroll-cue" href="#about" aria-label="Scroll to about section"><span></span> Scroll to explore</a>
+      </section>
 
-          <div class="hero-visual">
-            <div class="photo-frame">
-              <img src="static/media/profile_pic.8ecff8f610136c71334c.jfif" alt="Marielle Datu portrait" />
-            </div>
+      <section class="section about-section" id="about">
+        <div class="container about-grid">
+          <div class="section-heading reveal">
+            <p class="eyebrow">A little about me</p>
+            <h2>Organized by nature.<br /><span>Creative by choice.</span></h2>
+          </div>
+          <div class="about-copy reveal">
+            <p>
+              I’m a 21-year-old Computer Science student, aspiring Project Manager, and Full Stack
+              Developer. I bring people together, turn big ideas into coordinated plans, and look
+              for creative ways to make projects and digital experiences better.
+            </p>
+            <p>
+              Leadership and collaboration are at the center of how I work: I enjoy organizing
+              priorities, connecting teammates, communicating clearly, and carrying ideas through
+              to delivery. In my undergraduate thesis, that includes coordinating a four-person
+              team; across my projects, I also bring initiative, creativity, and a drive to innovate.
+            </p>
+            <div class="about-tags"><span>Leadership & coordination</span><span>Creative problem-solving</span><span>Full stack development</span></div>
           </div>
         </div>
       </section>
 
-      <section id="about" class="section-pad about">
-        <div class="container split-layout">
-          <div class="section-tag">About Me</div>
-          <div class="about-content">
-            <h2>Creative, organized, and driven to build with purpose.</h2>
-            <p>
-              I am a young professional with a passion for <em>leadership, coordination, creativity, and innovation</em>.
-              I love planning, guiding ideas from concept to execution, and collaborating with people who want to create
-              meaningful projects that make an impact. My strengths lie in bringing structure to ideas, inspiring teamwork,
-              and transforming creative thinking into real-world results.
-            </p>
-            <p>
-              As an <em>aspiring Project Manager</em> and <em>Full Stack Developer</em>, I aim to combine technical skills with
-              strategic thinking. I enjoy developing digital solutions while also understanding how projects move forward through
-              communication, adaptability, and strong decision-making.
-            </p>
-            <p>
-              From student leadership roles to project-based experiences, I have learned the value of initiative, accountability,
-              and collaboration. I believe every project is an opportunity to create value, solve problems, and help people
-              connect more meaningfully through thoughtful design and execution.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" class="section-pad projects">
+      <section class="section projects-section" id="projects">
         <div class="container">
-          <div class="section-head">
-            <div class="section-tag">Projects</div>
-            <h2>Selected work and product experiences</h2>
+          <div class="section-heading projects-heading reveal">
+            <div><p class="eyebrow">Selected work</p><h2>Projects with <span>purpose.</span></h2></div>
+            <p>Explore a mix of team leadership, thoughtful design, and practical problem-solving.</p>
           </div>
-
+          <div class="project-toolbar reveal">
+            <div class="filters" role="group" aria-label="Filter projects">
+              <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All <span>7</span></button>
+              <button class="filter-button" type="button" data-filter="leadership" aria-pressed="false">Leadership</button>
+              <button class="filter-button" type="button" data-filter="web" aria-pressed="false">Web</button>
+              <button class="filter-button" type="button" data-filter="mobile" aria-pressed="false">Mobile</button>
+              <button class="filter-button" type="button" data-filter="games" aria-pressed="false">Games & CS</button>
+            </div>
+            <span class="project-count" aria-live="polite">Showing 7 projects</span>
+          </div>
           <div class="project-grid">
-            <article class="project-card">
-              <img src="cover/glide-pitch.png" alt="Glide pitch cover" />
-              <div class="project-body">
-                <span class="project-type">Pitch Deck</span>
-                <h3>Glide</h3>
-                <p>A startup-style pitch project that highlights innovation, product vision, and problem-solving through a compelling presentation.</p>
-              </div>
+            <article class="project-card reveal" data-categories="leadership mobile">
+              <button class="project-open" type="button" aria-label="View ViVy project details"
+                data-title="ViVy — GCash Receipt Fraud Detection"
+                data-type="Undergraduate thesis · 2026"
+                data-description="Led a four-member thesis team through scope planning, task coordination, and the final oral defense. As Usability Lead, coordinated the developer, designer, and QA tester and led the PSSUQ usability evaluation."
+                data-stack="Project management, usability testing, PSSUQ">
+                <span class="project-image"><img src="cover/VIVY.jpg" alt="ViVy project cover" loading="lazy" /><span class="image-arrow">↗</span></span>
+                <span class="project-info"><span class="project-type">THESIS · TEAM LEADERSHIP</span><span class="project-title">ViVy <span>↗</span></span><span class="project-description">A team-led thesis project focused on detecting fraudulent GCash receipts.</span><span class="project-tags"><i>Project Management</i><i>Usability</i></span></span>
+              </button>
             </article>
-
-            <article class="project-card">
-              <img src="cover/vivy.png" alt="VIVY project cover" />
-              <div class="project-body">
-                <span class="project-type">Product Concept</span>
-                <h3>VIVY</h3>
-                <p>A concept-driven project centered on user experience and meaningful digital interaction, blending creativity with practical design thinking.</p>
-              </div>
+            <article class="project-card reveal" data-categories="mobile leadership">
+              <button class="project-open" type="button" aria-label="View Glide project details"
+                data-title="Glide — Mobile App for School Organizations"
+                data-type="Mobile app · HAU School of Computing · 2025"
+                data-description="Built a Flutter app that lets school organizations register, gives presidents a way to log in, and supports announcements and updates. Designed the admin experience and coordinated feature requirements with organization stakeholders."
+                data-stack="Dart, Flutter, UI/UX, stakeholder coordination">
+                <span class="project-image"><img src="static/media/mobile.104f1f76f667a30a1420.png" alt="Glide mobile app design" loading="lazy" /><span class="image-arrow">↗</span></span>
+                <span class="project-info"><span class="project-type">MOBILE · ORGANIZATIONS</span><span class="project-title">Glide <span>↗</span></span><span class="project-description">A mobile app for school organizations to manage registrations and announcements.</span><span class="project-tags"><i>Flutter</i><i>Dart</i><i>UI/UX</i></span></span>
+              </button>
             </article>
-
-            <article class="project-card">
-              <img src="cover/commeownity-pitch.png" alt="Commeownity project cover" />
-              <div class="project-body">
-                <span class="project-type">Community Platform</span>
-                <h3>Commeownity</h3>
-                <p>A collaborative community idea built around connection, accessibility, and digitally enabled participation.</p>
-              </div>
+            <article class="project-card reveal" data-categories="web">
+              <button class="project-open" type="button" aria-label="View Commeownity project details"
+                data-title="Commeownity — Cat Adoption Website"
+                data-type="Web project · 2024"
+                data-description="Created a cat adoption website with pet browsing, adoption details, and straightforward navigation. The experience is designed to make it easier for visitors to explore adoptable cats."
+                data-stack="Web, UI, API">
+                <span class="project-image"><img src="cover/commeownity-pitch.png" alt="Commeownity cat adoption project cover" loading="lazy" /><span class="image-arrow">↗</span></span>
+                <span class="project-info"><span class="project-type">WEB · COMMUNITY</span><span class="project-title">Commeownity <span>↗</span></span><span class="project-description">A cat adoption experience for browsing pets and learning about adoption.</span><span class="project-tags"><i>Web</i><i>UI</i><i>API</i></span></span>
+              </button>
             </article>
-
-            <article class="project-card">
-              <img src="cover/daily-bread-pitch.png" alt="Daily Bread project cover" />
-              <div class="project-body">
-                <span class="project-type">Service Design</span>
-                <h3>Daily Bread</h3>
-                <p>A community-centered concept that supports better resource sharing and improved everyday experiences through thoughtful digital systems.</p>
-              </div>
+            <article class="project-card reveal" data-categories="web">
+              <button class="project-open" type="button" aria-label="View Daily Bread Book project details"
+                data-title="Daily Bread Book — Bakery Sales & Inventory"
+                data-type="Business tool"
+                data-description="A sales and inventory logbook for a bakery. It records customer orders, discounts, and cash or GCash payments, tracks bread stock, and creates a printable daily PDF report."
+                data-stack="Sales tracking, inventory, PDF reports">
+                <span class="project-image"><img src="cover/daily-bread-pitch.png" alt="Daily Bread Book bakery tool cover" loading="lazy" /><span class="image-arrow">↗</span></span>
+                <span class="project-info"><span class="project-type">WEB · BUSINESS TOOL</span><span class="project-title">Daily Bread Book <span>↗</span></span><span class="project-description">Sales and stock tracking made practical for a neighborhood bakery.</span><span class="project-tags"><i>Inventory</i><i>Reporting</i></span></span>
+              </button>
             </article>
-
-            <article class="project-card">
-              <img src="cover/tailtales-pitch.png" alt="Tailtales project cover" />
-              <div class="project-body">
-                <span class="project-type">UX Storytelling</span>
-                <h3>Tailtales</h3>
-                <p>An engaging idea that merges storytelling, interaction, and user-centered design to create meaningful digital engagement.</p>
-              </div>
+            <article class="project-card reveal" data-categories="mobile leadership">
+              <button class="project-open" type="button" aria-label="View TailTales project details"
+                data-title="TailTales — Community App for Pet Owners"
+                data-type="Mobile app · 2026"
+                data-description="A mobile app concept where pet owners can browse adoptable pets and record daily milestones in a digital diary. Led planning and UI/UX design, defining features, user flows, and screen layouts from concept to prototype."
+                data-stack="Mobile, planning, UI/UX">
+                <span class="project-image"><img src="cover/tailtales-pitch.png" alt="TailTales pet community project cover" loading="lazy" /><span class="image-arrow">↗</span></span>
+                <span class="project-info"><span class="project-type">MOBILE · UI/UX</span><span class="project-title">TailTales <span>↗</span></span><span class="project-description">A pet community app concept for adoption discovery and everyday memories.</span><span class="project-tags"><i>Planning</i><i>UI/UX</i><i>Mobile</i></span></span>
+              </button>
             </article>
-
-            <article class="project-card">
-              <img src="cover/jeep-box-hero-pitch.png" alt="Jeep Box project cover" />
-              <div class="project-body">
-                <span class="project-type">Innovation Concept</span>
-                <h3>Jeep-Box</h3>
-                <p>A practical and creative solution that explores product utility, system thinking, and user value in a modern context.</p>
-              </div>
+            <article class="project-card reveal" data-categories="games">
+              <button class="project-open" type="button" aria-label="View Jeep Box Hero project details"
+                data-title="Jeep Box Hero — Interactive Game"
+                data-type="Game development · 2025"
+                data-description="A level-based adventure game with dialogue-driven quests, inventory management, and progression tracking."
+                data-stack="Flutter, Dart, game development">
+                <span class="project-image"><img src="cover/jeep-box-hero-pitch.png" alt="Jeep Box Hero game project cover" loading="lazy" /><span class="image-arrow">↗</span></span>
+                <span class="project-info"><span class="project-type">GAME · INTERACTIVE</span><span class="project-title">Jeep Box Hero <span>↗</span></span><span class="project-description">A level-based adventure with dialogue, inventory, and player progression.</span><span class="project-tags"><i>Flutter</i><i>Dart</i><i>GameDev</i></span></span>
+              </button>
+            </article>
+            <article class="project-card reveal" data-categories="web games">
+              <button class="project-open" type="button" aria-label="View Page Replacement Simulator project details"
+                data-title="Page Replacement Simulator"
+                data-type="Operating Systems project"
+                data-description="An interactive simulator for five page replacement algorithms, with step-by-step page fault and hit tracking. Built with Flask and a REST API."
+                data-stack="Python, Flask, REST API, operating systems">
+                <span class="project-image"><img src="cover/page-replacement-simulator-pitch.png" alt="Page Replacement Simulator project cover" loading="lazy" /><span class="image-arrow">↗</span></span>
+                <span class="project-info"><span class="project-type">WEB · COMPUTER SCIENCE</span><span class="project-title">Page Replacement Simulator <span>↗</span></span><span class="project-description">See page-replacement algorithms work, one step at a time.</span><span class="project-tags"><i>Python</i><i>Flask</i><i>CS Theory</i></span></span>
+              </button>
             </article>
           </div>
+          <p class="empty-state" hidden>No projects in this category yet.</p>
         </div>
       </section>
 
-      <section id="achievements" class="section-pad achievements">
+      <section class="section skills-section" id="skills">
         <div class="container">
-          <div class="section-tag">Achievements</div>
-          <h2>Leadership, recognition, and academic excellence</h2>
-          <div class="achievement-list">
-            <div class="achievement-item"><strong>SSC Secretary</strong> — Student Supreme Council Secretary</div>
-            <div class="achievement-item"><strong>With Highest Honors</strong></div>
-            <div class="achievement-item"><strong>Serviam Awardee</strong></div>
-            <div class="achievement-item"><strong>Best in Science</strong></div>
-            <div class="achievement-item"><strong>Gawad Gobernador</strong></div>
-            <div class="achievement-item"><strong>Gawad Talino</strong></div>
-            <div class="achievement-item"><strong>High Honors</strong></div>
-            <div class="achievement-item"><strong>Dean’s Lister</strong></div>
+          <div class="section-heading reveal"><p class="eyebrow">What I bring</p><h2>People, plans, <span>and pixels.</span></h2></div>
+          <div class="skills-grid">
+            <article class="skill-card reveal"><span class="skill-number">01</span><h3>Project coordination</h3><p>Scope, timelines, task planning, team communication, and steady follow-through.</p><div class="skill-chips"><i>Planning</i><i>Teamwork</i><i>Documentation</i></div></article>
+            <article class="skill-card reveal"><span class="skill-number">02</span><h3>UI/UX design</h3><p>User flows and interface design shaped by empathy, clarity, and usability.</p><div class="skill-chips"><i>Figma</i><i>Wireframes</i><i>Prototypes</i></div></article>
+            <article class="skill-card reveal"><span class="skill-number">03</span><h3>Full Stack Development</h3><p>Building web and mobile applications, connecting user-facing experiences with data and backend logic.</p><div class="skill-chips"><i>Python</i><i>SQL</i><i>HTML/CSS</i><i>JavaScript</i><i>Dart</i><i>Flutter</i><i>Git</i></div></article>
+          </div>
+          <div class="achievements-block reveal">
+            <div class="achievements-heading"><p class="eyebrow">Beyond the classroom</p><h3>Leadership & <span>achievements.</span></h3></div>
+            <div class="achievements-grid">
+              <article class="achievement-card"><span class="achievement-mark">✦</span><div><h4>Supreme Student Council Secretary</h4><p>Saint Catherine of Siena Academy · Senior High School</p></div><span class="achievement-year">2021–2023</span></article>
+              <article class="achievement-card"><span class="achievement-mark">✧</span><div><h4>With Highest Honors</h4><p>Senior High School · STEM</p></div></article>
+              <article class="achievement-card"><span class="achievement-mark">✧</span><div><h4>Serviam Awardee</h4><p>Saint Catherine of Siena Academy</p></div></article>
+              <article class="achievement-card"><span class="achievement-mark">✧</span><div><h4>Best in Science</h4><p>Senior High School</p></div></article>
+              <article class="achievement-card"><span class="achievement-mark">✧</span><div><h4>Gawad Gobernador Awardee</h4><p>Senior High School</p></div></article>
+              <article class="achievement-card"><span class="achievement-mark">✧</span><div><h4>Gawad Talino Awardee</h4><p>Mercury Drug</p></div></article>
+              <article class="achievement-card"><span class="achievement-mark">✧</span><div><h4>Graduated with High Honors</h4><p>Junior High School</p></div></article>
+              <article class="achievement-card"><span class="achievement-mark">✦</span><div><h4>Dean’s Lister</h4><p>Holy Angel University · 2023–Present</p></div></article>
+            </div>
+          </div>
+          <div class="education-note reveal"><span class="education-icon">✳</span><p><strong>Currently studying Computer Science</strong><br />Holy Angel University · B.S. Computer Science, 2023–2027</p><span class="education-honors">Aspiring Project Manager</span></div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="container contact-panel reveal">
+          <div><p class="eyebrow">Let’s connect</p><h2>Have a good idea?<br /><span>Let’s make it happen.</span></h2><p>I’m excited to learn, collaborate, and contribute to meaningful projects.</p></div>
+          <div class="contact-actions">
+            <a class="button button-light" href="mailto:marielledatu0611@gmail.com">Email me <span aria-hidden="true">↗</span></a>
+            <a href="https://www.linkedin.com/in/marielle-datu-549aa3328/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a href="https://github.com/ryukarien" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
           </div>
         </div>
       </section>
     </main>
+    <footer class="site-footer container"><a class="brand" href="#home" aria-label="Marielle, back to top"><img class="brand-logo" src="static/media/logo.d15a7ce15a18b3681290.png" alt="" /></a><span>Made with curiosity and care · <span id="current-year"></span></span><a href="#home">Back to top ↑</a></footer>
 
-    <footer id="contact" class="site-footer">
-      <div class="container footer-wrap">
-        <div>
-          <p class="footer-name">Marielle Datu</p>
-          <p>Aspiring Project Manager • Full Stack Developer</p>
-        </div>
-        <a href="CV_Datu.pdf" target="_blank" rel="noreferrer">Download CV</a>
-      </div>
-    </footer>
-
-    <script src="static/js/portfolio.js"></script>
+    <dialog class="project-dialog" aria-labelledby="dialog-title">
+      <button class="dialog-close" type="button" aria-label="Close project details">×</button>
+      <p class="eyebrow" id="dialog-type"></p>
+      <h2 id="dialog-title"></h2>
+      <p class="dialog-description" id="dialog-description"></p>
+      <div class="dialog-stack" id="dialog-stack"></div>
+    </dialog>
   </body>
 </html>
